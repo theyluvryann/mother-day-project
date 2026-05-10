@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff0f5;
+  overflow: hidden;
+  text-align: center;
+}
+
+.page {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.active {
+  display: flex;
+}
+
+/* BOX */
+#box {
+  font-size: 80px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  50% { transform: translateX(10px); }
+  75% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}
+
+/* HEARTS */
+.heart {
+  position: absolute;
+  color: red;
+  font-size: 20px;
+  animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+  from { transform: translateY(-10%); opacity: 1; }
+  to { transform: translateY(110vh); opacity: 0; }
+}
+
+/* BUTTONS */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: #ff4d6d;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* HEART FINAL */
+#heart {
+  font-size: 120px;
+  transition: transform 0.5s;
+}
